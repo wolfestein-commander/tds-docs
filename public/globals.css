@@ -1,0 +1,388 @@
+/* ── TDS Terminal Theme ── */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --top-nav-height: 60px;
+
+  /* Core palette */
+  --bg-primary: #0a0f0a;
+  --bg-secondary: #0d120d;
+  --bg-elevated: #111a11;
+  --bg-surface: #141e14;
+  --bg-card: rgba(20, 30, 20, 0.6);
+
+  /* Green accents */
+  --green-primary: #00ff41;
+  --green-muted: #00cc33;
+  --green-dim: #1a3a1a;
+  --green-subtle: rgba(0, 255, 65, 0.06);
+  --green-border: rgba(0, 255, 65, 0.12);
+  --green-glow: rgba(0, 255, 65, 0.15);
+
+  /* Text */
+  --text-primary: #e0e8e0;
+  --text-secondary: #8a9a8a;
+  --text-muted: #4a5a4a;
+  --text-bright: #ffffff;
+
+  /* Borders */
+  --border-color: rgba(0, 255, 65, 0.08);
+  --border-active: rgba(0, 255, 65, 0.25);
+
+  /* Misc */
+  --radius: 2px;
+  --transition: 150ms ease;
+
+  /* Font families */
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(0, 255, 65, 0.2);
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography ── */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mono);
+  color: var(--text-bright);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 1.5rem;
+  color: var(--text-bright);
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 2.5rem 0 1rem;
+  color: var(--green-primary);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 0.9rem;
+  margin: 2rem 0 0.75rem;
+  color: var(--text-bright);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 0.75rem;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.7;
+  margin: 0 0 1.25rem;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+strong {
+  color: var(--text-bright);
+  font-weight: 700;
+}
+
+/* ── Links ── */
+
+a {
+  color: var(--green-primary);
+  text-decoration: none;
+  transition: color var(--transition), text-shadow var(--transition);
+}
+
+a:hover {
+  color: #33ff66;
+  text-shadow: 0 0 8px var(--green-glow);
+}
+
+/* ── Lists ── */
+
+ul, ol {
+  padding-left: 1.25rem;
+  margin: 0 0 1.25rem;
+}
+
+li {
+  line-height: 1.7;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+li::marker {
+  color: var(--green-primary);
+}
+
+/* ── Code (inline) ── */
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--bg-elevated);
+  color: var(--green-primary);
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius);
+  border: 1px solid var(--green-border);
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+/* ── Code blocks (Prism overrides) ── */
+
+pre[class*='language-'] {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--green-border) !important;
+  border-radius: var(--radius) !important;
+  padding: 1.25rem 1.5rem !important;
+  margin: 0 0 1.5rem !important;
+  text-shadow: none !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.85rem !important;
+  line-height: 1.6 !important;
+  overflow-x: auto;
+}
+
+code[class*='language-'] {
+  text-shadow: none !important;
+  color: var(--text-primary) !important;
+}
+
+/* Prism token colors */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--text-muted) !important;
+}
+
+.token.punctuation {
+  color: var(--text-secondary) !important;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  color: #66ffaa !important;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin {
+  color: var(--green-primary) !important;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: var(--text-secondary) !important;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #00cc88 !important;
+}
+
+.token.function,
+.token.class-name {
+  color: #88ffcc !important;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #ffaa44 !important;
+}
+
+/* ── Tables ── */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  border: 1px solid var(--green-border);
+}
+
+th {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--green-primary);
+  text-align: left;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border-active);
+  background: var(--bg-elevated);
+}
+
+td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background: var(--green-subtle);
+}
+
+/* ── Images ── */
+
+/* Markdoc wraps the DocImage component output in a <p> */
+p:has(> img) {
+  margin: 1.75rem 0 0;
+  line-height: 0;
+  font-size: 0;
+}
+
+/* Caption — italic-only paragraph immediately after an image paragraph */
+p:has(> img) + p {
+  margin: 0.45rem 0 2.25rem;
+  line-height: 1.4;
+}
+
+p:has(> img) + p > em:only-child {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ── Blockquote ── */
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 2px solid var(--green-primary);
+  background: var(--green-subtle);
+  color: var(--text-secondary);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* ── Horizontal Rule ── */
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border-color);
+  margin: 2rem 0;
+}
+
+/* ── Scrollbar ── */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green-dim);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-muted);
+}
+
+/* ── Heading anchors ── */
+
+.heading {
+  position: relative;
+}
+
+.heading:hover .anchor-link {
+  opacity: 1 !important;
+  color: var(--green-primary) !important;
+}
+
+/* ── Utility ── */
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+/* ── Scan-line overlay effect (subtle) ── */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.03) 0px,
+    rgba(0, 0, 0, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
