@@ -86,6 +86,11 @@ export function TableOfContents({toc}) {
           li.padded :global(a) {
             padding-left: 1.75rem;
           }
+          @media (max-width: 1023px) {
+            nav {
+              display: none;
+            }
+          }
         `}
       </style>
     </nav>

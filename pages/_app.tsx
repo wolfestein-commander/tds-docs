@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 
 import { SideNav, TableOfContents, TopNav } from '../components';
@@ -42,6 +42,7 @@ export type MyAppProps = MarkdocNextJsPageProps
 
 export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
   const { markdoc } = pageProps;
+  const [navOpen, setNavOpen] = useState(false);
 
   let title = TITLE;
   let description = DESCRIPTION;
@@ -70,9 +71,12 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <TopNav />
+      <TopNav onMenuToggle={() => setNavOpen(o => !o)} menuOpen={navOpen} />
       <div className="page">
-        <SideNav />
+        <SideNav isOpen={navOpen} onClose={() => setNavOpen(false)} />
+        {navOpen && (
+          <div className="nav-overlay" onClick={() => setNavOpen(false)} />
+        )}
         <div className="doc-body">
           <main className="flex column">
             <Component {...pageProps} />
@@ -104,6 +108,22 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
             font-size: 14px;
             padding: 2.5rem 3rem 4rem;
             background: var(--bg-primary);
+          }
+          .nav-overlay {
+            display: none;
+          }
+          @media (max-width: 767px) {
+            main {
+              padding: 1.5rem 1.25rem 3rem;
+            }
+            .nav-overlay {
+              display: block;
+              position: fixed;
+              inset: 0;
+              top: var(--top-nav-height);
+              z-index: 80;
+              background: rgba(0, 0, 0, 0.6);
+            }
           }
         `}
       </style>

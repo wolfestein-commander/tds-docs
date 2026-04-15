@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {useRouter} from 'next/router';
 import Link from 'next/link';
 
@@ -40,11 +40,20 @@ const items = [
   },
 ];
 
-export function SideNav() {
+interface SideNavProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export function SideNav({ isOpen, onClose }: SideNavProps) {
   const router = useRouter();
 
+  useEffect(() => {
+    onClose();
+  }, [router.pathname]);
+
   return (
-    <nav className="sidenav">
+    <nav className={`sidenav${isOpen ? ' open' : ''}`}>
       <div className="nav-content">
         {items.map((item) => (
           <div key={item.title} className="section">
@@ -148,6 +157,23 @@ export function SideNav() {
             font-size: 0.65rem;
             color: var(--text-muted);
             letter-spacing: 0.05em;
+          }
+          @media (max-width: 767px) {
+            nav {
+              position: fixed;
+              top: var(--top-nav-height);
+              left: 0;
+              height: calc(100vh - var(--top-nav-height));
+              z-index: 90;
+              transform: translateX(-100%);
+              transition: transform 250ms ease;
+              flex: none;
+              width: 260px;
+              box-shadow: 4px 0 24px rgba(0, 0, 0, 0.6);
+            }
+            nav.open {
+              transform: translateX(0);
+            }
           }
         `}
       </style>

@@ -244,13 +244,20 @@ code[class*='language-'] {
 
 /* ── Tables ── */
 
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+  border: 1px solid var(--green-border);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
   font-size: 0.8rem;
   font-family: var(--font-mono);
-  border: 1px solid var(--green-border);
+  border: none;
+  min-width: 480px;
 }
 
 th {
@@ -282,6 +289,11 @@ tr:hover td {
 }
 
 /* ── Images ── */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* Markdoc wraps the DocImage component output in a <p> */
 p:has(> img) {
@@ -366,6 +378,27 @@ hr {
 
 .column {
   flex-direction: column;
+}
+
+/* ── Mobile responsive ── */
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  pre[class*='language-'] {
+    padding: 1rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  blockquote {
+    padding: 0.6rem 1rem;
+  }
 }
 
 /* ── Scan-line overlay effect (subtle) ── */
