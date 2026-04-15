@@ -42,5 +42,7 @@ The Agent operates with execution-scoped wallet access. It holds signing authori
 
 | Resource | Link |
 |---|---|
-| Litepaper | Coming soon |
-| GitHub | Coming soon |
+| Litepaper | [Read Litepaper](https://docsend.com/view/vpk7rbvmryuuq7nx) |
+| Blog | [paragraph.com/@thedumbstreet](https://paragraph.com/@thedumbstreet) |
+| Official TG Chat | [thedumbstreet.xyz/tg](https://thedumbstreet.xyz/tg) |
+| GitHub | Disclosed Soon |

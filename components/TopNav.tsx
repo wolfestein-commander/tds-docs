@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 interface TopNavProps {
@@ -26,7 +25,7 @@ export function TopNav({ onMenuToggle, menuOpen }: TopNavProps) {
           </Link>
         </div>
         <section>
-          <a href="https://thedumbstreet.xyz/x" target="_blank" rel="noopener noreferrer" className="cta">Join TG</a>
+          <a href="https://thedumbstreet.xyz/tg" target="_blank" rel="noopener noreferrer" className="cta">Join TG</a>
           <a href="https://docsend.com/view/vpk7rbvmryuuq7nx" target="_blank" rel="noopener noreferrer">Litepaper</a>
           <a href="https://paragraph.com/@thedumbstreet" target="_blank" rel="noopener noreferrer">Blog</a>
         </section>
