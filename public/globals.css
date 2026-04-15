@@ -297,14 +297,15 @@ img {
 
 /* Markdoc wraps the DocImage component output in a <p> */
 p:has(> img) {
-  margin: 1.75rem 0 0;
+  margin: 2rem 0 2.75rem;
   line-height: 0;
   font-size: 0;
 }
 
 /* Caption — italic-only paragraph immediately after an image paragraph */
+/* Negative top margin pulls caption close to the image, cancelling most of the 2.75rem */
 p:has(> img) + p {
-  margin: 0.45rem 0 2.25rem;
+  margin: -2.25rem 0 2.75rem;
   line-height: 1.4;
 }
 
@@ -398,6 +399,14 @@ hr {
 
   blockquote {
     padding: 0.6rem 1rem;
+  }
+
+  p:has(> img) {
+    margin: 1.5rem 0 2.25rem;
+  }
+
+  p:has(> img) + p {
+    margin: -1.75rem 0 2.25rem;
   }
 }
 
