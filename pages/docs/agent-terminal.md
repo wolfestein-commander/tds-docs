@@ -83,7 +83,7 @@ The **Trade Logs** tab provides a full record of all trades executed by the Agen
 | **Swap** | Asset pair traded (e.g. WETH→USDC) |
 | **Amount** | USD value of the trade |
 | **Asset Price** | Price of the asset at time of execution |
-| **TX Hash** | On-chain transaction hash — click to open on Basescan. As additional networks are supported, links open on the corresponding block explorer. |
+| **TX Hash** | On-chain transaction hash — click to open on the block explorer. |
 
 Use the filters at the top-right to view all trades or filter by pair. The footer shows running totals: swaps, confirmed, pending, and failed. A green dot on the TX Hash indicates a confirmed on-chain transaction. All trade data is a direct record of on-chain settlement — not simulated or estimated.
 

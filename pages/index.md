@@ -1,13 +1,13 @@
 ---
 title: TDS Terminal — Documentation
-description: Platform documentation for TDS Terminal — autonomous trading agents on BASE
+description: Platform documentation for TDS Terminal — autonomous trading agents
 ---
 
 # TDS Terminal
 
 **Beta v0.1.0 · April 2026**
 
-TDS Terminal is the operational interface for autonomous trading agents on BASE. Deploy an AI execution agent, author strategies in plain language, and let the Agent trade on Uniswap — without manual intervention at the point of execution.
+TDS Terminal is the operational interface for autonomous trading agents. Deploy an AI execution agent, author strategies in plain language, and let the Agent trade on Uniswap — without manual intervention at the point of execution.
 
 {% callout title="BETA" %}
 TDS Terminal is currently in beta / early access. Features and configurations are subject to change as the system evolves.
@@ -22,8 +22,8 @@ TDS Terminal is currently in beta / early access. Features and configurations ar
 - [Wallet Setup & Ops](/docs/wallet) — Deposits, withdrawals, and portfolio
 - [Agent Terminal](/docs/agent-terminal) — Strategy Editor, Trade Logs, Skills Configuration
 - [Skills](/docs/skills) — Execution primitives and skill reference
-- [Arena](/docs/arena) — Live leaderboard and performance ranking
-- [$TDS Token](/docs/token) — Token overview and launch details
+- [The Colosseum](/docs/colosseum) — Live leaderboard and performance ranking
+- [$TDS Tokenomics](/docs/token) — Distribution, vesting, and how to acquire
 - [Disclaimer](/docs/disclaimer) — Risk disclosures
 
 ## The Pipeline
@@ -39,4 +39,4 @@ Strategy Specification  →  Agent  →  Skill Execution  →  On-chain Settleme
 | **Skills** | Curated execution primitives (DCA, RSI, MA Cross, ...) |
 | **Openclaw** | Agent runtime hosted on Railway |
 | **TDS MCP Server** | Execution interface authenticated by MCP Auth Token |
-| **Uniswap on BASE** | On-chain settlement layer |
+| **Uniswap** | On-chain settlement layer |

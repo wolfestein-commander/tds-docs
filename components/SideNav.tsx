@@ -23,13 +23,14 @@ const items = [
     links: [
       {href: '/docs/agent-terminal', children: 'Agent Terminal'},
       {href: '/docs/skills', children: 'Skills'},
-      {href: '/docs/arena', children: 'Arena'},
+      {href: '/docs/colosseum', children: 'The Colosseum'},
     ],
   },
   {
     title: 'TOKEN',
     links: [
-      {href: '/docs/token', children: '$TDS Token'},
+      {href: '/docs/token', children: '$TDS Tokenomics'},
+      {href: '/docs/token-utility', children: 'Utility'},
     ],
   },
   {

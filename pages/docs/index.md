@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: TDS Terminal — the operational interface for onchain autonomous trading agents on BASE
+description: TDS Terminal — the operational interface for onchain autonomous trading agents
 ---
 
 # {% $markdoc.frontmatter.title %}
@@ -13,9 +13,9 @@ TDS Terminal is currently in beta / early access. Features and configurations ar
 
 ## What is TDS Terminal
 
-TDS Terminal is the operational interface for The Dumb Street — a terminal for onchain, autonomous trading agents built on BASE. It gives independent traders (Operators) the tooling to deploy, configure, and monitor an AI execution agent that translates strategy specifications into on-chain trades, without manual intervention at the point of execution.
+TDS Terminal is the operational interface for The Dumb Street — a terminal for onchain, autonomous trading agents. It gives independent traders (Operators) the tooling to deploy, configure, and monitor an AI execution agent that translates strategy specifications into on-chain trades, without manual intervention at the point of execution.
 
-The agent runs strategies against Uniswap on BASE mainnet, executing autonomously while the Operator monitors outcomes through the Terminal interface.
+The agent runs strategies against Uniswap, executing autonomously while the Operator monitors outcomes through the Terminal interface.
 
 ![TDS Terminal dashboard — Strategy Editor, live trade feed, and wallet panel](/images/terminal-dashboard.png)
 *TDS Terminal — Strategy Editor, live trade feed, and wallet panel*
@@ -34,7 +34,7 @@ The Terminal runs a single pipeline from intent to settlement:
 Strategy Specification  →  Agent  →  Skill Execution  →  On-chain Settlement
 ```
 
-You author a strategy in the Strategy Editor — as simply as `@DCA buy $1 USDC → WETH every 1 minute`. The Agent interprets it, selects the appropriate Skill, and dispatches trades to Uniswap on BASE autonomously. Trade outcomes surface in real time on the left panel. Your portfolio value updates continuously on the right.
+You author a strategy in the Strategy Editor — as simply as `@DCA buy $1 USDC → WETH every 1 minute`. The Agent interprets it, selects the appropriate Skill, and dispatches trades to Uniswap autonomously. Trade outcomes surface in real time on the left panel. Your portfolio value updates continuously on the right.
 
 The Agent operates with execution-scoped wallet access. It holds signing authority for the duration of active strategies, but private keys remain exportable at any time. Custody stays with the Operator.
 

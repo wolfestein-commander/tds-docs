@@ -27,7 +27,7 @@ All trading involves substantial risk of loss. Assets traded on this platform ar
 
 ## No Swap Fee Guarantee
 
-The Dumb Street does not charge a platform fee on swaps. However, Uniswap v4 pool fees (typically 0.05%–1%) apply to every trade and are set by liquidity providers, not by this platform. Gas costs on Ethereum mainnet apply to every on-chain transaction. These costs are your responsibility.
+The Dumb Street does not charge a platform fee on swaps. However, Uniswap v4 pool fees (typically 0.05%–1%) apply to every trade and are set by liquidity providers, not by this platform. Gas costs apply to every on-chain transaction. These costs are your responsibility.
 
 ## Non-Custodial Responsibility
 

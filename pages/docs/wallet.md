@@ -11,12 +11,12 @@ The right panel of the Terminal contains two tabs: **Wallet Ops** and **Portfoli
 
 ## Wallet Ops
 
-The **Wallet Ops** tab is the primary control panel for your Agent wallet. It shows your wallet address on BASE, MCP Auth Token, and current token balances.
+The **Wallet Ops** tab is the primary control panel for your Agent wallet. It shows your wallet address, MCP Auth Token, and current token balances.
 
 ![Wallet Ops panel — address, MCP auth token, balance breakdown](/images/wallet-ops.png)
 *Wallet Ops panel — address, MCP auth token, balance breakdown*
 
-- **Address** — your Agent's wallet address on BASE, shown in truncated form. Click the copy icon to copy the full address.
+- **Address** — your Agent's wallet address, shown in truncated form. Click the copy icon to copy the full address.
 - **MCP Auth Token** — your account-bound auth token in truncated form. Click the copy icon to copy it.
 - **Your Balance** — total portfolio value in USD with a breakdown of all tokens held with a balance above $0.01.
 
@@ -24,13 +24,13 @@ The **Wallet Ops** tab is the primary control panel for your Agent wallet. It sh
 
 Click **+ Add Funds** to reveal your deposit address.
 
-![Deposit address — copy and send ETH or USDC on BASE](/images/wallet-add-funds.png)
-*Deposit address — copy and send ETH or USDC on BASE*
+![Deposit address — copy and send ETH or USDC](/images/wallet-add-funds.png)
+*Deposit address — copy and send ETH or USDC*
 
-Copy the address using **Copy Address** and send ETH or USDC to it on the BASE network. Funds appear in your balance once the transaction is confirmed on-chain.
+Copy the address using **Copy Address** and send ETH or USDC to it. Funds appear in your balance once the transaction is confirmed on-chain.
 
 {% callout title="WARNING" %}
-Only send funds on the **BASE** network. Sending from a different network will result in permanent loss of funds.
+Only send funds on the supported network. Sending from a different network will result in permanent loss of funds.
 {% /callout %}
 
 ## Withdrawing Funds

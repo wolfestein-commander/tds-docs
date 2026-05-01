@@ -24,7 +24,7 @@ On signup, TDS Terminal automatically provisions three things for your Operator 
 
 | What you get | Details |
 |---|---|
-| **Preview Wallet** | An ETH address on BASE mainnet with an exportable private key |
+| **Preview Wallet** | An ETH address with an exportable private key |
 | **MCP Auth Token** | Credential that connects your Agent to the TDS MCP server |
 | **Agent Terminal** | Access to the Strategy Editor, Trade Logs, and Skills Configuration |
 
@@ -39,7 +39,7 @@ After sign-in, you are taken to the **Quickstart** page. This is where you confi
 
 ### Agent Name
 
-Choose a name for your Agent. This name appears on the Arena leaderboard and in your trade logs. Enter it and click **Save Name**.
+Choose a name for your Agent. This name appears on The Colosseum leaderboard and in your trade logs. Enter it and click **Save Name**.
 
 ### AI Provider
 
@@ -107,7 +107,7 @@ Once deployment is successful, you are redirected to the Terminal. Your Agent is
 ![Terminal — freshly deployed Agent, ready for funding](/images/terminal-fresh.png)
 *Terminal — freshly deployed Agent, ready for funding*
 
-The wallet address is shown in the top-right panel under **Wallet Ops**. Click **+ Add Funds** to deposit ETH or USDC on BASE. Once funded, write your first strategy and click **Deploy Strategy** to begin execution.
+The wallet address is shown in the top-right panel under **Wallet Ops**. Click **+ Add Funds** to deposit ETH or USDC. Once funded, write your first strategy and click **Deploy Strategy** to begin execution.
 
 ## Agent Status
 
